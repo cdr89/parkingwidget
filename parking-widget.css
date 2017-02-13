@@ -1,0 +1,140 @@
+/*** General ***/
+#parkingwidget{
+}
+
+a {
+	text-decoration: none;
+	color: #e00;
+}
+
+.right-align {
+	text-align: right;
+}
+
+
+
+/*** RESPONSIVENESS AND GRID LAYOUT ***/
+body {
+	font-size: 3vmin;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	*behavior: url(boxsizing.htc);
+}
+
+img.respimg { 
+	max-width:100%; 
+	height: auto;
+	width: auto; 
+}
+
+.row {
+	width: 100%; 
+	max-width: 960px; 
+	min-width: 720px; 
+	margin: 0 auto;
+}
+
+.row:before,
+.row:after {
+	content: " "; 
+	display: table;
+}
+ 
+.row:after {
+	clear: both;
+}
+ 
+.row {
+	*zoom: 1;
+}
+
+[class*='col-'] {
+	float: left;
+	display: block; 
+	padding: 0 15px;
+}
+
+[class*="col-"] + [class*="col-"]:last-child {float: right;}
+
+
+
+/* for small screen devices */
+@media only screen and (max-width:730px) {
+	.row {
+		width: auto; 
+		min-width: 0; 
+		margin-left: 0; 
+		margin-right: 0;
+	}
+
+	[class^='resp-col-'] {
+		width: auto !important; 
+		float: none;
+	}
+
+	[class^="resp-col-"] + [class^="resp-col-"]:last-child {float: none;}
+
+	[class^="resp-col-"]:before, [class^="resp-col-"]:after {
+		content:""; 
+		display:table;
+	}
+
+	[class^="resp-col-"]:after {clear: both;}
+}
+
+
+
+/* Columns sizes */
+[class*="col-30"] {
+	width: 30%;
+}
+
+[class*="col-50"] {
+	width: 50%;
+}
+
+[class*="col-70"] {
+	width: 70%;
+}
+ 
+[class*="col-100"] {
+	width: 100%;
+}
+
+
+
+/*** Specific id and classes ***/
+parkimg{
+	max-width: 370px;
+}
+
+#features ul {
+    list-style-image: url('img/check.png');
+}
+
+.details { /* marker class for the details */
+	display: none;
+}
+
+#park-less-container{
+	border-top: 1pt solid #ddd;
+}
+
+
+
+/* parkings */
+.parking-item {
+	border: 1pt solid #ddd;
+}
+
+.selected-parking{
+	border: 1pt solid #d00;
+}
+
+.parking-id {
+	display: none;
+}
